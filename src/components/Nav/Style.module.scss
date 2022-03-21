@@ -1,0 +1,96 @@
+@import "~bootstrap/scss/bootstrap";
+
+.navContainer {
+  display: flex;
+  position: absolute;
+  width: 1920px;
+  height: 60px;
+
+  background: #696969;
+}
+
+.bgLogo {
+  position: absolute;
+  width: 196px;
+  height: 60px;
+  top: 0;
+  left: 53px;
+  background: #FF3700;
+}
+
+.logo {
+  position: absolute;
+  width: 91px;
+  height: 37.45px;
+  top: 11px;
+  left: 52px;
+}
+
+.pass {
+  position: absolute;
+  width: 91px;
+  height: 37.45px;
+  top: 11px;
+  left: 52px;
+}
+
+.pass_logo_svg {
+  position: absolute;
+  top: -4px;
+  right: 0;
+}
+
+.pass_name_lg_svg {
+  position: absolute;
+  top: 15.7px;
+  left: 0;
+}
+
+.applications {
+  position: absolute;
+  left: 195px;
+  width: 119px;
+  height: 60px;
+  text-align: center;
+  p {
+    position: absolute;
+    font-family: 'Arial', serif;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding-top: 60px;
+  padding-right: 0; // default: null
+  padding-bottom: 0;
+  padding-left: 0; // default: null
+  @include gradient-bg();
+
+  %container-flex-properties {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  > .container,
+  > .container-fluid {
+    @extend %container-flex-properties;
+  }
+
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+      @extend %container-flex-properties;
+    }
+  }
+}
