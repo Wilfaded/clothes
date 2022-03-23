@@ -25,7 +25,7 @@ export const Login = () => {
                             />
                         </div>
                     </div>
-                    <Link to="/home">
+                    <Link to="/home/ru">
                         <button
                             className="LoginInClass"
                         >

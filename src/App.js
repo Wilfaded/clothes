@@ -10,8 +10,8 @@ function App() {
       <div>
         <Switch>
             <Route path={"/"} exact component={Login} />
-            <Route path={"/home"} exact component={Home} />
-            <Route path={"/reporting"} exact component={Reporting} />
+            <Route path={"/home"} component={Home} />
+            <Route path={"/reporting"} component={Reporting} />
         </Switch>
       </div>
     </BrowserRouter>
