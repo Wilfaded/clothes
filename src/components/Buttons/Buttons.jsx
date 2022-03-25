@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import styles from "./Button.module.scss"
+import styles from "./Style.module.scss"
 
 const Buttons = () => {
     return (

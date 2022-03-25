@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import Nav from "../components/Nav";
+import Nav from "../../components/Nav";
 
 export const Reporting = () => {
     return (
