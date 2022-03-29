@@ -1,32 +1,44 @@
-import React, {Fragment} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import styles from "./Style.module.scss"
+import {createPortal} from "react-dom";
+
+const modalRootElement = document.getElementById("modal");
+
+const Modal = (props) => {
+    const { open, onClose } = props;
+
+    const element = useMemo(() => document.createElement("div"),[])
+
+    useEffect(() => {
+        if (open) {
+            modalRootElement.appendChild(element);
+
+            return () => {
+                modalRootElement.removeChild(element);
+            };
+        }
+    });
+
+    if (open) {
+        return createPortal(
+            <div className={styles.modal_bg} onClick={onClose}>
+                <div className={styles.modal_card}>{props.children}</div>
+            </div>,
+            element
+        );
+    }
+
+    return null;
+};
 
 const Buttons = () => {
+    const [open, setOpen] = useState(false);
+
     return (
-        <Fragment>
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Launch static backdrop modal
-            </button>
-
-            <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="staticBackdropLabel">Modal title</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">fff</button>
-                        </div>
-                        <div className="modal-body">
-                            ...
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Understood</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Fragment>
-
+        <div>
+            <button className={styles.button_out} onClick={() => setOpen(true)}>Нажми</button>
+            <Modal open={open} onClose={() => setOpen(false)}><p>123</p></Modal>
+        </div>
     )
 }
 
