@@ -227,7 +227,6 @@
   border-collapse: separate;
   border-spacing: 0 8px;
   table-layout: auto;
-
 }
 
 
@@ -250,3 +249,47 @@
     border-top-right-radius: 8px;
   }
 }
+
+.table_back_modal {
+  margin: 20px;
+  position: absolute;
+  top: 122px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 14px;
+  background: white;
+  width: 855px;
+  height: 42px;
+  border-collapse: collapse;
+  text-align: left;
+  th {
+    font-family: 'Arial', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #696969;
+    height: 42px;
+    background: #E0DBCF;
+    padding: 10px 8px;
+  }
+  th:first-child {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  th:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  td {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #424242;
+    padding: 9px 8px;
+    transition: .3s linear;
+    border-bottom: 1px solid #AFAFAF;;
+  }
+}
+

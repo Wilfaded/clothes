@@ -15,7 +15,7 @@ export const Home = () => {
                 </div>
                 <div className={styles.input_block}>
                     <div className={styles.input_page}>
-                        <img className={styles.front} src={Front} alt="Front"/>
+                        <img src={Front} alt="Front"/>
                         <p>Страница <input type="text"/> из 18</p>
                         <img src={Next} alt="Next"/>
                     </div>

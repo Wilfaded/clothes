@@ -1,14 +1,36 @@
 import React from "react";
 
 
-const id = {
+export const id = {
     "1": {
         number_rep: "653262",
         date: "13.01.2019",
         name: "Иванов Иван Сергеевич",
         number_tab: "444221",
         dev: "Information Developer",
-        works: "ГИВЦ"
+        works: "ГИВЦ",
+        material: {
+            "1": {
+                number_rep:  "653262",
+                name: "Жилет сигнальный",
+                number_mat: "200905"
+            },
+            "2": {
+                number_rep:  "653262",
+                name: "Галстук",
+                number_mat: "207763"
+            },
+            "3": {
+                number_rep:  "656236",
+                name: "Кожаный ремень",
+                number_mat: "212635"
+            },
+            "4": {
+                number_rep:  "656236",
+                name: "Жилет утепленный",
+                number_mat: "200900"
+            }
+        }
     },
     "2": {
         number_rep: "656763",
@@ -142,6 +164,7 @@ export const Zlp = ({ids, valuer}) => {
     alert("Такого св-ва не существует!");
     return null;
 }
+
 
 const Users = ({ids}) => {
     if (id[`${ids}`] === undefined) {

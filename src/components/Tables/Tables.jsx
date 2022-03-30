@@ -3,7 +3,7 @@ import styles from "./Style.module.scss"
 import {createPortal} from "react-dom";
 import Exit from "../../static/img/Exit.svg";
 import Users from "./Users";
-import id from "./Users";
+import {id} from "./Users/Users";
 import {Zlp} from "./Users/Users";
 
 const modalRootElement = document.getElementById("modal");
@@ -35,11 +35,10 @@ const Modal = (props) => {
     return null;
 };
 
-// eslint-disable-next-line no-unused-vars
-let temp;
+
+var temp;
 
 const Tables = () => {
-    let name;
     const [open, setOpen] = useState(false);
     return (
         <div>
@@ -136,11 +135,13 @@ const Tables = () => {
                     <p className={styles.text_to_dev_two}>Активная заявка:</p>
                 </div>
 
-                <div className={styles.block_to_mat}>
-                    <p className={styles.number_rep}>Номер заявки</p>
-                    <p className={styles.name_mat}>Наименование материала</p>
-                    <p className={styles.number_mat}>Номер материала</p>
-                </div>
+                <table className={styles.table_back_modal} cellPadding="11">
+                    <tr><th>Номер заявки</th><th>Наименование материала</th><th>Номер материала</th></tr>
+                    <tr><td>{id["1"].material["1"].number_rep}</td><td>{id["1"].material["1"].name}</td><td>{id["1"].material["1"].number_mat}</td></tr>
+                    <tr><td>{id["1"].material["2"].number_rep}</td><td>{id["1"].material["2"].name}</td><td>{id["1"].material["2"].number_mat}</td></tr>
+                    <tr><td>{id["1"].material["3"].number_rep}</td><td>{id["1"].material["3"].name}</td><td>{id["1"].material["3"].number_mat}</td></tr>
+                    <tr><td>{id["1"].material["4"].number_rep}</td><td>{id["1"].material["4"].name}</td><td>{id["1"].material["4"].number_mat}</td></tr>
+                </table>
 
                 <div className={styles.block_to_doing}>
                     <button className={styles.cancel} onClick={() => setOpen(false)}><p>Отменить</p></button>
