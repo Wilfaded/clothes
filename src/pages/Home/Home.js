@@ -16,7 +16,7 @@ export const Home = () => {
                 <div className={styles.input_block}>
                     <div className={styles.input_page}>
                         <img src={Front} alt="Front"/>
-                        <p>Страница <input type="text"/> из 18</p>
+                        <p>Страница <input type="text" defaultValue="1"/> из 18</p>
                         <img src={Next} alt="Next"/>
                     </div>
                     <p className={styles.looking}>Просмотр 1 - 13 из 348</p>

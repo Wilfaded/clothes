@@ -36,11 +36,11 @@ export const Login = () => {
                     <p className={styles.Lan}>Язык</p>
 
                     <div role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" className={`${"btn-check"}`} name="btnradio" id="btnradio1" autoComplete="off" checked/>
-                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btnradio1"><p>RU</p></label>
+                        <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio1" autoComplete="off" checked/>
+                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btn radio1"><p>RU</p></label>
 
-                        <input type="radio" className={`${"btn-check"}`} name="btnradio" id="btnradio2" autoComplete="off"/>
-                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btnradio2"><p>EN</p></label>
+                        <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio2" autoComplete="off"/>
+                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btn radio2"><p>EN</p></label>
                     </div>
                 </div>
             </div>

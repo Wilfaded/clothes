@@ -166,7 +166,6 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    color: #FF5121;
     margin: 0 10px;
   }
   margin: 8px 4px;
@@ -174,7 +173,6 @@
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
-  color: #FF5121;
   text-align: center;
   text-decoration: if($link-decoration == none, null, none);
   white-space: $btn-white-space;
@@ -187,29 +185,27 @@
   @include transition($btn-transition);
 
   &:hover {
-    color: #FF5121;
     p {color: #FFFFFF}
-    background-color: #FF5121;
+    background: #FF5121;
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
   .btn-check:focus + &,
   &:focus {
     p {color: #FFFFFF}
-    background-color: #FF5121;
+    background: #FF5121;
   }
 
   .btn-check:checked + &,
   .btn-check:active + &,
   &:active,
   &.active {
-    p {color: #FFFFFF}
-    @include box-shadow($btn-active-box-shadow);
-    background-color: #FF5121;
+    p {color: #FFFFFF;}
+    background: #FF5121;
 
     &:focus {
       p {color: #FFFFFF}
-      background-color: #FF5121;
+      background: #FF5121;
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
 
     }
