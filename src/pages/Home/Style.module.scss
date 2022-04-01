@@ -10,8 +10,7 @@
   background-size: cover;
 }
 
-.form_to_btn {
-  display: flex;
+.FormToBtn {
   position: absolute;
   height: 746px;
   left: 244px;
@@ -20,7 +19,7 @@
 }
 
 
-.input_block {
+.InputBlock {
   position: absolute;
   width: 1166px;
   height: 28px;
@@ -28,7 +27,7 @@
   left: 377px;
 }
 
-.input_page {
+.InputPage {
   display: flex;
   width: 232px;
   height: 100%;
@@ -61,7 +60,7 @@
   }
 }
 
-.looking {
+.Looking {
   position: absolute;
   font-family: 'Arial', sans-serif;
   font-style: normal;

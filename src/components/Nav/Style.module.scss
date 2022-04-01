@@ -1,14 +1,14 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
 //Основная полоса бара
-.bar {
+.Bar {
   display: flex;
   height: 60px;
   background: #696969;
 }
 
 //Блок под лого
-.logo {
+.Logo {
   position: absolute;
   width: 196px;
   height: 60px;
@@ -18,7 +18,7 @@
 }
 
 //Размерность лого
-.picture {
+.Picture {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -30,7 +30,7 @@
 //Стили на ссылки в поле
 
 //Заявки
-.ssl_one {
+.SslOne {
   position: absolute;
   left: 195px;
   width: 119px;
@@ -49,10 +49,10 @@
     color: #FFFFFF;
   }
 }
-.ssl_one:hover {
+.SslOne:hover {
   background: #424242;
 }
-.ssl_one_active {
+.SslOneActive {
   background: #424242;
   border-bottom: 5px;
   border-bottom-style: solid;
@@ -60,7 +60,7 @@
 }
 
 //Отчётность
-.ssl_two {
+.SslTwo {
   text-decoration: none;
   display: flex;
   position: absolute;
@@ -78,10 +78,10 @@
     color: #FFFFFF;
   }
 }
-.ssl_two:hover {
+.SslTwo:hover {
   background: #424242;
 }
-.ssl_two_active {
+.SslTwoActive {
   background: #424242;
   border-bottom: 5px;
   border-bottom-style: solid;
@@ -90,7 +90,7 @@
 
 
 //Блок смены языка
-.air_to_lan {
+.AirToLan {
   width: 113px;
   height: 32px;
   display: flex;
@@ -100,7 +100,7 @@
 }
 
 //Текст приветствия
-.text_hello {
+.TextHello {
   position: absolute;
   font-family: 'Arial', serif;
   font-size: 14px;
@@ -113,7 +113,7 @@
 }
 
 //Блок свг-выхода
-.block_out {
+.BlockOut {
   position: absolute;
   right: 50px;
   top: 16px;
@@ -121,7 +121,7 @@
   height: 24px;
 }
 //Сама свг-картинка выхода
-.logout {
+.Logout {
   margin-top: auto;
   margin-bottom: auto;
 }

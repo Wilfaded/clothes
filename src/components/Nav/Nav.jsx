@@ -8,34 +8,34 @@ import Language from "../Language";
 
 const Nav = () => {
     return (
-        <nav className={styles.bar}>
-            <div className={styles.logo}>
-                <img src={Logo} className={styles.picture} alt="Logo"/>
+        <nav className={styles.Bar}>
+            <div className={styles.Logo}>
+                <img src={Logo} className={styles.Picture} alt="Logo"/>
             </div>
 
             <NavLink
-                className={styles.ssl_one}
-                activeClassName={styles.ssl_one_active}
+                className={styles.SslOne}
+                activeClassName={styles.SslOneActive}
                 to="/home/"
             >
                 <p>Заявки</p>
             </NavLink>
 
             <NavLink
-                className={styles.ssl_two}
-                activeClassName={styles.ssl_two_active}
+                className={styles.SslTwo}
+                activeClassName={styles.SslTwoActive}
                 to="/reporting/"
             >
                 <p>Отчётность</p>
             </NavLink>
 
-            <div className={styles.air_to_lan}>
+            <div className={styles.AirToLan}>
                 <Language/>
             </div>
-            <p className={styles.text_hello}>Здравствуйте, Алексей Олегович</p>
-            <div className={styles.block_out}>
+            <p className={styles.TextHello}>Здравствуйте, Алексей Олегович</p>
+            <div className={styles.BlockOut}>
                 <NavLink
-                    className={styles.logout}
+                    className={styles.Logout}
                     to={"/"}
                     >
                     <img src={LogOut} alt="LogOut"/>

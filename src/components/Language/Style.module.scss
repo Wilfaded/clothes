@@ -1,70 +1,72 @@
-@import "~bootstrap/scss/bootstrap";
-
-//Перепись bootstrap-buttons:
-
-.ibtn {
-  p {
-    font-family: 'Arial', serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    color: #FF5121;
-    margin: 0 10px;
-  }
-  margin: 8px 4px;
-  display: inline-block;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  line-height: $btn-line-height;
-  color: #FF5121;
+//Дефолт блок русского языка
+.BtnBarRu {
+  position: absolute;
+  width: 38px;
+  height: 23.75px;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  align-items: center;
   text-align: center;
-  text-decoration: if($link-decoration == none, null, none);
-  white-space: $btn-white-space;
-  vertical-align: middle;
-  cursor: if($enable-button-pointers, pointer, null);
-  user-select: none;
-  border: 1px solid #FF5121;
-  background-color: #FFFFFF;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
-  @include transition($btn-transition);
-
-  &:hover {
-    color: #FF5121;
-    p {color: #FFFFFF}
-    background-color: #FF5121;
-    text-decoration: if($link-hover-decoration == underline, none, null);
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    p {color: #FFFFFF}
-    background-color: #FF5121;
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active {
-    p {color: #FFFFFF}
-    @include box-shadow($btn-active-box-shadow);
-    background-color: #FF5121;
-
-    &:focus {
-      p {color: #FFFFFF}
-      background-color: #FF5121;
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-
-    }
-  }
-
-  &:disabled,
-  &.disabled,
-  fieldset:disabled & {
-    p {color: #FFFFFF}
-    background-color: #FF5121;
-    pointer-events: none;
-    opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
+  background: #696969;
+  p {
+    position: static;
+    font-family: 'Arial', serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 4px;
+    color: #FFFFFF;
   }
 }
+.BtnBarRu:hover {
+  background: #FFFFFF;
+  p {
+    color: #696969;
+  }
+}
+.BtnBarRuActive {
+  background: #FFFFFF;
+  p {
+    color: #696969;
+  }
+}
+
+
+//Дефолт блок ин. языка
+.BtnBarEn {
+  position: absolute;
+  width: 38px;
+  height: 23.75px;
+  top: 0;
+  left: 46px;
+  text-decoration: none;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  align-items: center;
+  text-align: center;
+  background: #696969;
+  p {
+    position: static;
+    font-family: 'Arial', serif;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 4px;
+    color: #FFFFFF;
+  }
+}
+.BtnBarEn:hover {
+  background: #FFFFFF;
+  p {
+    color: #696969;
+  }
+}
+.BtnBarEnActive {
+  background: #FFFFFF;
+  p {
+    color: #696969;
+  }
+}
+
+

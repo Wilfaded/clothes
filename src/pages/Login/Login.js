@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import styles from "./Style.module.scss";
 
 export const Login = () => {
+    let Ru;
+    let En;
+    const [value, setValue] = useState(Ru)
     return (
         <div className={styles.BG}>
             <div className={styles.MainBlock}>
@@ -37,10 +40,10 @@ export const Login = () => {
 
                     <div role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio1" autoComplete="off" checked/>
-                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btn radio1"><p>RU</p></label>
+                        <label className={`${styles.IBtnLog} ${"btn-outline-danger"}`} htmlFor="btn radio1"><p>RU</p></label>
 
                         <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio2" autoComplete="off"/>
-                        <label className={`${styles.i_btn_log} ${"btn-outline-danger"}`} htmlFor="btn radio2"><p>EN</p></label>
+                        <label className={`${styles.IBtnLog} ${"btn-outline-danger"}`} htmlFor="btn radio2"><p>EN</p></label>
                     </div>
                 </div>
             </div>
