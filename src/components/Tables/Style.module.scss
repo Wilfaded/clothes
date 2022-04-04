@@ -171,33 +171,7 @@
 }
 
 //Стили под таблицу
-.TableBack {
-  width: 1433px;
-  border-collapse: separate;
-  border-spacing: 0 8px;
-  table-layout: auto;
-}
 
-
-.TrBack {
-  background-color: #FFFFFF;
-  td {
-    font-family: 'Arial', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: #424242;
-  }
-  td:first-child {
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-  }
-  td:last-child {
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-}
 
 .TableBackModal {
   margin: 20px;
