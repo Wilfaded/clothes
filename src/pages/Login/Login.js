@@ -31,10 +31,12 @@ export const Login = () => {
                 <Link to="/home/ru">
                     <button
                         className={styles.LoginInClass}
+                        type="submit"
                     >
                         <p>Войти</p>
                     </button>
                 </Link>
+
                 <div className={styles.LanguageType}>
                     <p className={styles.Lan}>Язык</p>
 
