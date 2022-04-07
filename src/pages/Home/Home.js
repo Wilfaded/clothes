@@ -3,11 +3,12 @@ import Nav from "../../components/Nav";
 import styles from "./Style.module.scss";
 import Front from "../../static/img/Front.svg";
 import Next from "../../static/img/Next.svg";
-import TableModal from "../../components/Tables";
+import TableModal from "./Table";
 
 
 
 export const Home = () => {
+
     return (
         <div>
             <Nav />

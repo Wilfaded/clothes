@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import styles from "./Style.module.scss"
-import Exit from "../../static/img/Exit.svg";
-import Users, {Devs, NameMats, Names, NumMats, NumReps} from "./Users/Users";
-import Modal from "./Modal";
+import Exit from "../../../static/img/Exit.svg";
+import UsersModule, {Devs, NameMats, Names, NumMats, NumReps} from "../../../components/Tables/Users/UsersModule";
+import Modal from "../../../components/Tables/Modal";
 
 
 const TableModal = () => {
@@ -15,7 +15,7 @@ const TableModal = () => {
             setOpen(true);
             setCount(number);
         }} className={styles.TrBack} id={`${number}`}>
-            <Users ids={number}/>
+            <UsersModule ids={number}/>
         </tr>
     )
 

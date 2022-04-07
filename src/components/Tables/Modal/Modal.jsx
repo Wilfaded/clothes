@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo} from "react";
 import {createPortal} from "react-dom";
-import styles from "../Style.module.scss";
+import styles from "./Style.module.scss";
 
 
 const modalRootElement = document.getElementById("modal");

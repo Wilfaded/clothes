@@ -28,7 +28,7 @@ export const Reporting = () => {
                     <NavLink
                         className={styles.GivenBtnOne}
                         activeClassName={styles.GivenBtnActive}
-                        to="given"
+                        to="/reporting/given/"
                         onClick={() => setTemp(1)}
                     >
                         <span>Выдано</span>
@@ -37,7 +37,7 @@ export const Reporting = () => {
                     <NavLink
                         className={styles.GivenBtnTwo}
                         activeClassName={styles.GivenBtnActive}
-                        to="remainder"
+                        to="/reporting/remainder/"
                         onClick={() => setTemp(2)}
                     ><span>Остаток</span>
                     </NavLink>
