@@ -1,6 +1,16 @@
 import React from "react";
 import initialState from "../../../redux/initialState";
 import store from "../../../redux/store";
+import {
+    AKT_GET, COUNT_GIVE, DATE_GET, DATE_GIVE,
+    DEV,
+    NAME,
+    NAME_MAT,
+    NAME_MAT_LAST,
+    NUMBER_MAT,
+    NUMBER_REP,
+    NUMBER_TAB
+} from "../../../redux/actions/Actions";
 
 
 let namePerson = "";
@@ -17,7 +27,7 @@ let countListGive = "";
 
 
 export const Names = (count) => {
-    store.dispatch({type: "NAME", ids: count});
+    store.dispatch({type: NAME, ids: count});
     store.subscribe(() => {
         const state = store.getState()
         namePerson = state
@@ -26,7 +36,7 @@ export const Names = (count) => {
 }
 
 export const Devs = (count) => {
-    store.dispatch({type: "DEV", ids: count});
+    store.dispatch({type: DEV, ids: count});
     store.subscribe(() => {
         const state = store.getState()
         devPerson = state
@@ -35,7 +45,7 @@ export const Devs = (count) => {
 }
 
 export const NumReps = (count, props) => {
-    store.dispatch({type: "NUMBER_REP", ids: count, idsMat: props});
+    store.dispatch({type: NUMBER_REP, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         numberRep = state
@@ -44,7 +54,7 @@ export const NumReps = (count, props) => {
 }
 
 export const NameMats = (count, props) => {
-    store.dispatch({type: "NAME_MAT", ids: count, idsMat: props});
+    store.dispatch({type: NAME_MAT, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         nameMat = state
@@ -53,7 +63,7 @@ export const NameMats = (count, props) => {
 }
 
 export const NumMats = (count, props) => {
-    store.dispatch({type: "NUMBER_MAT", ids: count, idsMat: props});
+    store.dispatch({type: NUMBER_MAT, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         numberMat = state
@@ -62,7 +72,7 @@ export const NumMats = (count, props) => {
 }
 
 export const NameListMat = (count) => {
-    store.dispatch({type: "NAME_MAT_LIST", ids: count});
+    store.dispatch({type: NAME_MAT_LAST, ids: count});
     store.subscribe(() => {
         const state = store.getState()
         nameListMat = state
@@ -71,7 +81,7 @@ export const NameListMat = (count) => {
 }
 
 export const TabListMat = (count) => {
-    store.dispatch({type: "NUMBER_TAB", ids: count});
+    store.dispatch({type: NUMBER_TAB, ids: count});
     store.subscribe(() => {
         const state = store.getState()
         tabListMat = state
@@ -80,7 +90,7 @@ export const TabListMat = (count) => {
 }
 
 export const AktListNumber = (count, props) => {
-    store.dispatch({type: "AKT_GET", ids: count, idsMat: props});
+    store.dispatch({type: AKT_GET, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         aktListNumber = state
@@ -89,7 +99,7 @@ export const AktListNumber = (count, props) => {
 }
 
 export const DateListGet = (count, props) => {
-    store.dispatch({type: "DATE_GET", ids: count, idsMat: props});
+    store.dispatch({type: DATE_GET, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         dateListGet = state
@@ -98,7 +108,7 @@ export const DateListGet = (count, props) => {
 }
 
 export const DateListGive = (count, props) => {
-    store.dispatch({type: "DATE_GIVE", ids: count, idsMat: props});
+    store.dispatch({type: DATE_GIVE, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         dateListGive = state
@@ -107,7 +117,7 @@ export const DateListGive = (count, props) => {
 }
 
 export const CountListGive = (count, props) => {
-    store.dispatch({type: "COUNT_GIVE", ids: count, idsMat: props});
+    store.dispatch({type: COUNT_GIVE, ids: count, idsMat: props});
     store.subscribe(() => {
         const state = store.getState()
         countListGive = state

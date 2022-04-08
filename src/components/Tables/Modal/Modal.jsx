@@ -6,7 +6,7 @@ import styles from "./Style.module.scss";
 const modalRootElement = document.getElementById("modal");
 
 const Modal = (props) => {
-    const {open, onClose} = props;
+    const {open} = props;
 
     const element = useMemo(() => document.createElement("div"),[])
 
@@ -19,9 +19,10 @@ const Modal = (props) => {
             };
         }
     });
+
     if (open) {
         return createPortal(
-            <div className={styles.ModalBg} onClick={() => onClose}>
+            <div className={styles.ModalBg}>
                 <div className={styles.ModalCard}>{props.children}</div>
             </div>,
             element
