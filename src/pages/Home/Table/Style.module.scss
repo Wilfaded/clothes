@@ -1,4 +1,5 @@
 //Навбар под модальное окно
+
 .NavToModal {
   position: absolute;
   width: 100%;
@@ -42,6 +43,7 @@
 }
 
 //Текст "Штатная должность"
+
 .TextToDevOne {
   position: absolute;
   font-family: "Arial", sans-serif;
@@ -147,7 +149,7 @@
   transform: translate(0, -0.05em)
 }
 
-//Стили под таблицу
+//Стили под модалку
 
 
 .TableBackModal {
@@ -195,14 +197,16 @@
 
 //Стили под таблицу
 .TableBack {
-  width: 1433px;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 0 8px;
   table-layout: auto;
+
+
 }
 
 .TrBack {
-  background-color: #FFFFFF;
+  background: #FFFFFF;
   td {
     font-family: 'Arial', serif;
     font-style: normal;

@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import styles from "./Style.module.scss";
-import initialState from "../../../redux/initialState";
 import SecModal from "./SecModal/SecModal";
+import store from "../../../redux/store";
+
+
 
 export const Remainder = () => {
     const [open, setOpen] = useState(false);
@@ -13,13 +15,13 @@ export const Remainder = () => {
             setOpen(true);
             setCount(number);
         }}>
-            <td>{initialState.Materials[`${number}`].name}</td>
-            <td>{initialState.Materials[`${number}`].number_mat}</td>
-            <td>{initialState.Materials[`${number}`].count}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].name}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].number_mat}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].count}</td>
         </tr>
     )
     return (
-        <>
+        <div>
             <table className={styles.Table} cellPadding="16">
                 <tr className={styles.TrBack}>
                     <th>Наименование материала</th>
@@ -29,6 +31,6 @@ export const Remainder = () => {
                 {ListTr}
                 <SecModal open={open} count={count} onClose={() => setOpen(false)}/>
             </table>
-        </>
+        </div>
     )
 }

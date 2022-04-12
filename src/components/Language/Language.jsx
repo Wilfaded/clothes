@@ -1,24 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./Style.module.scss"
-import {NavLink} from "react-router-dom";
+import LanActive from "./activeClick/active";
+
+
 
 const Language = () => {
+    const [lan, setLan] = useState(true);
     return (
         <div>
-            <NavLink
-                className={styles.BtnBarRu}
-                activeClassName={styles.BtnBarRuActive}
-                to="ru"
-            >
-                <p>RU</p>
-            </NavLink>
-            <NavLink
-                className={styles.BtnBarEn}
-                activeClassName={styles.BtnBarEnActive}
-                to="en"
-            >
-                <p>EN</p>
-            </NavLink>
+            <div>
+                <LanActive lan={lan} onClickActiveEn={() => setLan(false)} onClickActiveRu={() => setLan(true)}/>
+            </div>
         </div>
     )
 }

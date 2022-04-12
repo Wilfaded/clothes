@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from "./Style.module.scss";
-import initialState from "../../../redux/initialState";
 import SecModal from "./SecModal/SecModal";
+import store from "../../../redux/store";
 
 
 
@@ -14,16 +14,16 @@ export const Given = () => {
             setOpen(true);
             setCount(number);
         }}>
-            <td>{initialState.Materials[`${number}`].getting["3"].date_give}</td>
-            <td>{initialState.Materials[`${number}`].name}</td>
-            <td>{initialState.Materials[`${number}`].number_mat}</td>
-            <td>{initialState.Materials[`${number}`].getting["3"].akt_number}</td>
-            <td>{initialState.Materials[`${number}`].getting["3"].date_get}</td>
-            <td>{initialState.Materials[`${number}`].number_tab}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].getting["3"].date_give}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].name}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].number_mat}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].getting["3"].akt_number}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].getting["3"].date_get}</td>
+            <td>{store.getState()["2"]["0"][`${number}`].number_tab}</td>
         </tr>
     )
     return (
-        <>
+        <div>
             <table className={styles.Table} cellPadding="16">
                 <tr className={styles.TrBack}>
                     <th>Дата выдачи</th>
@@ -37,6 +37,6 @@ export const Given = () => {
                 <SecModal open={open} count={count} onClose={() => setOpen(false)}/>
             </table>
 
-        </>
+        </div>
     )
 }

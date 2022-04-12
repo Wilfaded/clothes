@@ -15,7 +15,7 @@ const TableModal = () => {
                 <tr onClick={() => {
                     setCount(number);
                     setOpen(true);
-                }} className={styles.TrBack} id={`${number}`}>
+                }} className={styles.TrBack}>
                     <UsersModule ids={number}/>
                 </tr>
             )}
