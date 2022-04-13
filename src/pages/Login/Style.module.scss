@@ -130,7 +130,6 @@
 }
 
 .LanguageType {
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0;
@@ -157,67 +156,91 @@
   margin: 0 0;
 }
 
-//Перепись bootstrap-buttons:
 
-.IBtnLog {
+.Ru {
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #FF5121;
+  border-radius: 4px;
+  width: 53px;
+  height: 32px;
+  bottom: 32px;
+  left: 143.5px;
   p {
-    font-family: 'Arial', serif;
+    position: absolute;
+    left: 16px;
+    top: 7px;
+    font-family: 'Arial', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    margin: 0 10px;
+    color: #FF5121;
   }
-  margin: 8px 4px;
-  display: inline-block;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  line-height: $btn-line-height;
-  text-align: center;
-  text-decoration: if($link-decoration == none, null, none);
-  white-space: $btn-white-space;
-  vertical-align: middle;
-  cursor: if($enable-button-pointers, pointer, null);
-  user-select: none;
+}
+
+.En {
+  position: absolute;
+  background: #FFFFFF;
   border: 1px solid #FF5121;
-  background-color: #FFFFFF;
-  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
-  @include transition($btn-transition);
-
-  &:hover {
-    p {color: #FFFFFF}
-    background: #FF5121;
-    text-decoration: if($link-hover-decoration == underline, none, null);
+  border-radius: 4px;
+  width: 53px;
+  height: 32px;
+  bottom: 32px;
+  right: 143.5px;
+  p {
+    position: absolute;
+    left: 16px;
+    top: 7px;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FF5121;
   }
+}
 
-  .btn-check:focus + &,
-  &:focus {
-    p {color: #FFFFFF}
-    background: #FF5121;
+.RuActive {
+  position: absolute;
+  border: 1px solid #FF5121;
+  background: #FF5121;
+  border-radius: 4px;
+  width: 53px;
+  height: 32px;
+  bottom: 32px;
+  left: 143.5px;
+  p {
+    position: absolute;
+    left: 16px;
+    top: 7px;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
   }
+}
 
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active {
-    p {color: #FFFFFF;}
-    background: #FF5121;
-
-    &:focus {
-      p {color: #FFFFFF}
-      background: #FF5121;
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-
-    }
-  }
-
-  &:disabled,
-  &.disabled,
-  fieldset:disabled & {
-    p {color: #FFFFFF}
-    background-color: #FF5121;
-    pointer-events: none;
-    opacity: $btn-disabled-opacity;
-    @include box-shadow(none);
+.EnActive {
+  position: absolute;
+  background: #FF5121;
+  border: 1px solid #FF5121;
+  border-radius: 4px;
+  width: 53px;
+  height: 32px;
+  bottom: 32px;
+  right: 143.5px;
+  p {
+    position: absolute;
+    left: 16px;
+    top: 7px;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
   }
 }

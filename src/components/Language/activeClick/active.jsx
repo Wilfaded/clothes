@@ -6,15 +6,15 @@ const LanActive = (props) => {
 
     if (lan) return (
         <div>
-            <div className={styles.BtnBarRuActive}><p>RU</p></div>
-            <div className={styles.BtnBarEn} onClick={onClickActiveEn}><p>EN</p></div>
+            <button className={styles.BtnBarRuActive}><p>RU</p></button>
+            <button className={styles.BtnBarEn} onClick={onClickActiveEn}><p>EN</p></button>
         </div>
     )
 
     return (
         <div>
-            <div className={styles.BtnBarRu} onClick={onClickActiveRu}><p>RU</p></div>
-            <div className={styles.BtnBarEnActive}><p>EN</p></div>
+            <button className={styles.BtnBarRu} onClick={onClickActiveRu}><p>RU</p></button>
+            <button className={styles.BtnBarEnActive}><p>EN</p></button>
         </div>
     )
 }

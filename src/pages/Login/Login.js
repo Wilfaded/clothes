@@ -2,10 +2,32 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import styles from "./Style.module.scss";
 
+let TempLan = null;
+
+export function SetLanguage() {
+    return TempLan;
+}
+
+const LanActiveLogin = (props) => {
+    const {lan, onClickActiveEn, onClickActiveRu} = props;
+    TempLan = lan;
+    if (lan) return (
+        <div>
+            <button className={styles.RuActive}><p>RU</p></button>
+            <button className={styles.En} onClick={onClickActiveEn}><p>EN</p></button>
+        </div>
+    )
+
+    return (
+        <div>
+            <button className={styles.Ru} onClick={onClickActiveRu}><p>RU</p></button>
+            <button className={styles.EnActive}><p>EN</p></button>
+        </div>
+    )
+}
+
 export const Login = () => {
-    let Ru;
-    let En;
-    const [value, setValue] = useState(Ru)
+    const [lan, setLan] = useState(true);
     return (
         <div className={styles.BG}>
             <div className={styles.MainBlock}>
@@ -40,13 +62,7 @@ export const Login = () => {
                 <div className={styles.LanguageType}>
                     <p className={styles.Lan}>Язык</p>
 
-                    <div role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio1" autoComplete="off" checked/>
-                        <label className={`${styles.IBtnLog} ${"btn-outline-danger"}`} htmlFor="btn radio1"><p>RU</p></label>
-
-                        <input type="radio" className={`${"btn-check"}`} name="btn radio" id="btn radio2" autoComplete="off"/>
-                        <label className={`${styles.IBtnLog} ${"btn-outline-danger"}`} htmlFor="btn radio2"><p>EN</p></label>
-                    </div>
+                    <LanActiveLogin lan={lan} onClickActiveEn={() => setLan(false)} onClickActiveRu={() => setLan(true)}/>
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import styles from "./Style.module.scss"
 import LanActive from "./activeClick/active";
 
 
