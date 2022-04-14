@@ -4,7 +4,7 @@ import "./bootstrap.scss";
 import {Provider} from "react-redux";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import store from "./redux/store";
+import store from "./store/store";
 
 window.store = store;
 

@@ -1,16 +1,16 @@
 import styles from "../Style.module.scss";
-import {Devs, NameMats, Names, NumMats, NumReps} from "../../../../components/Tables/Users/UsersModule";
+import {Devs, NameMats, Names, NumMats, NumReps} from "../../../../store/tableBack/useTablebackActions";
 import Exit from "../../../../static/img/Exit.svg";
-import Modal from "../../../../components/Tables/Modal";
+import Modal from "../../../../components/Table/Modal";
 import React from "react";
 
 
 
 const SecModal = (props) => {
-    let {count, open, onClose} = props;
+    let {count, onClose} = props;
 
     return(
-        <Modal open={open}>
+        <Modal open={true}>
             <div className={styles.NavToModal}>
                 <p>Карточка сотрудника: {Names(count)}</p>
                 <button className={styles.NoBorder} onClick={() => onClose()}><img className={styles.Exits} src={Exit} alt="Exit" /></button>

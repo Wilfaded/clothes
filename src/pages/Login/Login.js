@@ -50,7 +50,7 @@ export const Login = () => {
                         />
                     </div>
                 </div>
-                <Link to="/home/ru">
+                <Link to="/home/">
                     <button
                         className={styles.LoginInClass}
                         type="submit"

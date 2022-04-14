@@ -1,13 +1,17 @@
 import React, {useState} from "react";
 import styles from "./Style.module.scss";
-import UsersModule from "../../../components/Tables/Users/UsersModule";
+import UsersModule from "../../../store/tableBack/useTablebackActions";
 import SecModal from "./SecModal/SecModal";
 
 
 const TableModal = () => {
     const [count, setCount] = useState(1);
-    const [open, setOpen] = useState(false);
+    const [isOpen, setOpen] = useState(false);
     const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+    function onClose() {
+        setOpen(false);
+    }
 
     return (
         <table className={styles.TableBack} cellPadding="16">
@@ -19,7 +23,7 @@ const TableModal = () => {
                     <UsersModule ids={number}/>
                 </tr>
             )}
-            <SecModal open={open} count={count} onClose={()=> setOpen(false)}/>
+            {isOpen ? <SecModal count={count} onClose={onClose}/> : null}
         </table>
     );
 }

@@ -9,15 +9,13 @@ import {
     NUMBER_MAT,
     NUMBER_REP,
     NUMBER_TAB
-} from "../actions/Actions";
+} from "./tablebackActions";
 
 
+const initialState = DefaultConfig;
 
 
-const initialState = DefaultConfig.map(instance => [instance]);
-
-
-export default function tableReducer (state = initialState, action) {
+export const tablebackReducer = (state = initialState, action) => {
     switch (action.type) {
         case NAME:
         case DEV:

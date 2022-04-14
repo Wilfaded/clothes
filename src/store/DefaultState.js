@@ -1,11 +1,9 @@
-const DefaultConfig = [
-    "Null", //0
-
-    { //1 - юзеры
+const DefaultConfig = {
+    users: {
         "1": {
             number_rep: "653262",
             date: "13.01.2019",
-            name:"Иванов Иван Сергеевич",
+            name: "Иванов Иван Сергеевич",
             number_tab: "444221",
             dev: "Information Developer",
             works: "ГИВЦ",
@@ -406,7 +404,7 @@ const DefaultConfig = [
         }
     },
 
-    { //2 - материалы
+    materials: {
         "1": {
             name: "Бензопила",
             count: "314",
@@ -742,6 +740,7 @@ const DefaultConfig = [
             }
         }
     }
-]
+}
+
 
 export default DefaultConfig;
